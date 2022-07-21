@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		124682312889506B004EB042 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124682302889506B004EB042 /* AppDelegate.swift */; };
 		124682332889506B004EB042 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124682322889506B004EB042 /* SceneDelegate.swift */; };
-		124682352889506B004EB042 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124682342889506B004EB042 /* ViewController.swift */; };
-		124682382889506B004EB042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124682362889506B004EB042 /* Main.storyboard */; };
 		1246823A28895070004EB042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1246823928895070004EB042 /* Assets.xcassets */; };
 		1246823D28895070004EB042 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1246823B28895070004EB042 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +17,6 @@
 		1246822D2889506B004EB042 /* ColourPiker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColourPiker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		124682302889506B004EB042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		124682322889506B004EB042 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		124682342889506B004EB042 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		124682372889506B004EB042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1246823928895070004EB042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1246823C28895070004EB042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1246823E28895070004EB042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,7 +63,6 @@
 		124682442889509C004EB042 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				124682342889506B004EB042 /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -75,7 +70,6 @@
 		12468245288953B0004EB042 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				124682362889506B004EB042 /* Main.storyboard */,
 				1246823B28895070004EB042 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -159,7 +153,6 @@
 			files = (
 				1246823D28895070004EB042 /* LaunchScreen.storyboard in Resources */,
 				1246823A28895070004EB042 /* Assets.xcassets in Resources */,
-				124682382889506B004EB042 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +163,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				124682352889506B004EB042 /* ViewController.swift in Sources */,
 				124682312889506B004EB042 /* AppDelegate.swift in Sources */,
 				124682332889506B004EB042 /* SceneDelegate.swift in Sources */,
 			);
@@ -179,14 +171,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		124682362889506B004EB042 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				124682372889506B004EB042 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1246823B28895070004EB042 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -325,7 +309,6 @@
 				INFOPLIST_FILE = "ColourPiker/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -352,7 +335,6 @@
 				INFOPLIST_FILE = "ColourPiker/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
