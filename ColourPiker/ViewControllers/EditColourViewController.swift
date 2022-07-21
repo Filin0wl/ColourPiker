@@ -9,6 +9,9 @@ import UIKit
 
 class EditColourViewController: UIViewController {
 
+    //MARK: - Outlets
+    @IBOutlet weak var colourFieldView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
