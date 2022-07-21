@@ -39,6 +39,7 @@
                 </label>
                 <slider opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="688" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vhz-Vt-IVI">
                     <rect key="frame" x="100" y="324" width="221" height="33"/>
+                    <color key="tintColor" systemColor="systemRedColor"/>
                 </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSG-qB-x9r">
                     <rect key="frame" x="67.333333333333329" y="323" width="27" height="34"/>
@@ -59,6 +60,7 @@
                 </label>
                 <slider opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="688" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vnt-nX-tCu">
                     <rect key="frame" x="100" y="367" width="221" height="33"/>
+                    <color key="tintColor" systemColor="systemGreenColor"/>
                 </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWQ-4C-kPd">
                     <rect key="frame" x="67.333333333333329" y="366" width="27" height="34"/>
@@ -79,11 +81,18 @@
                 </label>
                 <slider opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="688" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="q6E-dF-rWY">
                     <rect key="frame" x="100" y="410" width="221" height="33"/>
+                    <color key="tintColor" systemColor="systemBlueColor"/>
                 </slider>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVF-Eg-yTb">
-                    <rect key="frame" x="154" y="505" width="67" height="177"/>
+                    <rect key="frame" x="152.33333333333334" y="632" width="70.666666666666657" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="4hB-H3-VNU"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Done">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                    </buttonConfiguration>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWU-eM-aRF">
                     <rect key="frame" x="67.333333333333329" y="409" width="27" height="34"/>
@@ -129,6 +138,7 @@
                 <constraint firstItem="giF-Es-Cr9" firstAttribute="leading" secondItem="q6E-dF-rWY" secondAttribute="trailing" constant="8" symbolic="YES" id="hwN-7W-UUp"/>
                 <constraint firstItem="mPp-Eg-glt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="28" id="iYl-5H-AhX"/>
                 <constraint firstItem="gWU-eM-aRF" firstAttribute="top" secondItem="NWQ-4C-kPd" secondAttribute="bottom" constant="9" id="iuJ-Vo-Rer"/>
+                <constraint firstItem="eVF-Eg-yTb" firstAttribute="top" secondItem="q6E-dF-rWY" secondAttribute="bottom" constant="190" id="jU7-Up-TwW"/>
                 <constraint firstItem="eVF-Eg-yTb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jcJ-ig-ONI"/>
                 <constraint firstItem="PAN-5C-sbE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="mNg-jD-OeO"/>
                 <constraint firstItem="giF-Es-Cr9" firstAttribute="top" secondItem="X61-uo-93n" secondAttribute="bottom" constant="9" id="niM-u5-2AM"/>
@@ -139,7 +149,6 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="X61-uo-93n" secondAttribute="trailing" constant="16" id="tWt-bf-Vbv"/>
                 <constraint firstItem="NWQ-4C-kPd" firstAttribute="centerY" secondItem="Vnt-nX-tCu" secondAttribute="centerY" id="wtI-Sa-NuD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Bur-1Z-RoI" secondAttribute="trailing" constant="16" id="wty-ff-EDu"/>
-                <constraint firstItem="eVF-Eg-yTb" firstAttribute="top" secondItem="q6E-dF-rWY" secondAttribute="bottom" constant="63" id="xU2-8M-rnd"/>
                 <constraint firstItem="Vnt-nX-tCu" firstAttribute="leading" secondItem="NWQ-4C-kPd" secondAttribute="trailing" constant="8" symbolic="YES" id="zA0-Gc-CWb"/>
             </constraints>
             <point key="canvasLocation" x="135" y="130.98591549295776"/>
@@ -149,8 +158,17 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
