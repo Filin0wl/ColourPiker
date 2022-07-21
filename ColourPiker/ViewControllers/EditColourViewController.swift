@@ -15,12 +15,12 @@ class EditColourViewController: UIViewController {
     //MARK: Labels
     @IBOutlet weak var redValueLabel: UILabel!
     @IBOutlet weak var greenValueLabel: UILabel!
-    @IBOutlet weak var blueVaalueLabel: UILabel!
+    @IBOutlet weak var blueValueLabel: UILabel!
     
     //MARK: Sliders
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
-    @IBOutlet weak var blueSlider: NSLayoutConstraint!
+    @IBOutlet weak var blueSlider: UISlider!
     
     //MARK: Text fields
     @IBOutlet weak var redTextField: UITextField!
@@ -34,18 +34,26 @@ class EditColourViewController: UIViewController {
         
         colourFieldView.layer.cornerRadius = 6
         
+        
        
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - Actions
+    @IBAction func sliderChanged(_ sender: UISlider) {
+        switch sender {
+            case redSlider:
+                redValueLabel.text = String(format: "%.2f", redSlider.value)
+                redTextField.text = String(format: "%.2f", redSlider.value)
+            case greenSlider:
+                greenValueLabel.text = String(format: "%.2f", greenSlider.value)
+                greenTextField.text = String(format: "%.2f", greenSlider.value)
+            case blueSlider:
+                blueValueLabel.text = String(format: "%.2f", blueSlider.value)
+                blueTextField.text = String(format: "%.2f", blueSlider.value)
+            default:
+                break
+        }
     }
-    */
+    
 
 }

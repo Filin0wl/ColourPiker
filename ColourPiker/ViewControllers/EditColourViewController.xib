@@ -10,9 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditColourViewController" customModule="ColourPiker" customModuleProvider="target">
             <connections>
-                <outlet property="blueSlider" destination="G9O-rb-pa3" id="gO1-6E-H0n"/>
+                <outlet property="blueSlider" destination="q6E-dF-rWY" id="bAe-SI-gFT"/>
                 <outlet property="blueTextField" destination="giF-Es-Cr9" id="2cj-ch-VUj"/>
-                <outlet property="blueVaalueLabel" destination="gWU-eM-aRF" id="k8r-1F-Dp8"/>
+                <outlet property="blueValueLabel" destination="gWU-eM-aRF" id="k8r-1F-Dp8"/>
                 <outlet property="colourFieldView" destination="mPp-Eg-glt" id="PjL-T0-CD5"/>
                 <outlet property="doneButton" destination="eVF-Eg-yTb" id="0JW-Rd-ngG"/>
                 <outlet property="greenSlider" destination="Vnt-nX-tCu" id="GFD-fM-XbI"/>
@@ -37,7 +37,10 @@
                     </constraints>
                 </view>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bur-1Z-RoI">
-                    <rect key="frame" x="366" y="302" width="32" height="34"/>
+                    <rect key="frame" x="349" y="302" width="49" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="49" id="d4p-IY-lxZ"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
@@ -47,10 +50,6 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <slider opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="688" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vhz-Vt-IVI">
-                    <rect key="frame" x="101" y="304" width="259" height="33"/>
-                    <color key="tintColor" systemColor="systemRedColor"/>
-                </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSG-qB-x9r">
                     <rect key="frame" x="67.5" y="303" width="27" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -58,7 +57,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X61-uo-93n">
-                    <rect key="frame" x="366" y="345" width="32" height="34"/>
+                    <rect key="frame" x="349" y="345" width="49" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="49" id="0wi-g9-QbH"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
@@ -69,8 +71,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <slider opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="688" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vnt-nX-tCu">
-                    <rect key="frame" x="101" y="347" width="259" height="33"/>
+                    <rect key="frame" x="101" y="347" width="242" height="33"/>
                     <color key="tintColor" systemColor="systemGreenColor"/>
+                    <connections>
+                        <action selector="sliderChanged:" destination="-1" eventType="valueChanged" id="STZ-lz-efG"/>
+                    </connections>
                 </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWQ-4C-kPd">
                     <rect key="frame" x="67.5" y="346" width="27" height="34"/>
@@ -79,7 +84,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="giF-Es-Cr9">
-                    <rect key="frame" x="366" y="388" width="32" height="34"/>
+                    <rect key="frame" x="349" y="388" width="49" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="49" id="aNT-J4-pm1"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
@@ -90,8 +98,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <slider opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="688" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="q6E-dF-rWY">
-                    <rect key="frame" x="101" y="390" width="259" height="33"/>
+                    <rect key="frame" x="101" y="390" width="242" height="33"/>
                     <color key="tintColor" systemColor="systemBlueColor"/>
+                    <connections>
+                        <action selector="sliderChanged:" destination="-1" eventType="valueChanged" id="A3V-Q1-mZQ"/>
+                    </connections>
                 </slider>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVF-Eg-yTb">
                     <rect key="frame" x="171.5" y="716" width="71" height="50"/>
@@ -110,6 +121,13 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <slider opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="688" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vhz-Vt-IVI">
+                    <rect key="frame" x="101" y="304" width="242" height="33"/>
+                    <color key="tintColor" systemColor="systemRedColor"/>
+                    <connections>
+                        <action selector="sliderChanged:" destination="-1" eventType="valueChanged" id="KRZ-8c-7Wc"/>
+                    </connections>
+                </slider>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.17841282489999999" green="0.30052211880000002" blue="0.55689179899999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -160,7 +178,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Bur-1Z-RoI" secondAttribute="trailing" constant="16" id="wty-ff-EDu"/>
                 <constraint firstItem="Vnt-nX-tCu" firstAttribute="leading" secondItem="NWQ-4C-kPd" secondAttribute="trailing" constant="8" symbolic="YES" id="zA0-Gc-CWb"/>
             </constraints>
-            <point key="canvasLocation" x="135" y="130.98591549295776"/>
+            <point key="canvasLocation" x="134.78260869565219" y="130.58035714285714"/>
         </view>
     </objects>
     <resources>
