@@ -16,7 +16,7 @@ class StartViewController: UIViewController {
     }
 
     @objc func editTapped() {
-        //open edit page
+        navigationController?.pushViewController(EditColourViewController(), animated: true)
         print("tapped")
     }
 

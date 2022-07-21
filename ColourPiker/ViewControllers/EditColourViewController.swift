@@ -12,11 +12,29 @@ class EditColourViewController: UIViewController {
     //MARK: - Outlets
     @IBOutlet weak var colourFieldView: UIView!
     
+    //MARK: Labels
+    @IBOutlet weak var redValueLabel: UILabel!
+    @IBOutlet weak var greenValueLabel: UILabel!
+    @IBOutlet weak var blueVaalueLabel: UILabel!
+    
+    //MARK: Sliders
+    @IBOutlet weak var redSlider: UISlider!
+    @IBOutlet weak var greenSlider: UISlider!
+    @IBOutlet weak var blueSlider: NSLayoutConstraint!
+    
+    //MARK: Text fields
+    @IBOutlet weak var redTextField: UITextField!
+    @IBOutlet weak var greenTextField: UITextField!
+    @IBOutlet weak var blueTextField: UITextField!
+    
+    @IBOutlet weak var doneButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-        // Do any additional setup after loading the view.
+        colourFieldView.layer.cornerRadius = 6
+        
+       
     }
 
 
