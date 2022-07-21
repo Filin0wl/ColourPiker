@@ -56,15 +56,47 @@
 		1246822F2889506B004EB042 /* ColourPiker */ = {
 			isa = PBXGroup;
 			children = (
-				124682302889506B004EB042 /* AppDelegate.swift */,
-				124682322889506B004EB042 /* SceneDelegate.swift */,
-				124682342889506B004EB042 /* ViewController.swift */,
-				124682362889506B004EB042 /* Main.storyboard */,
-				1246823928895070004EB042 /* Assets.xcassets */,
-				1246823B28895070004EB042 /* LaunchScreen.storyboard */,
-				1246823E28895070004EB042 /* Info.plist */,
+				124682442889509C004EB042 /* ViewControllers */,
+				124682462889544C004EB042 /* Supporting Files */,
+				12468245288953B0004EB042 /* Storyboards */,
+				124682472889546B004EB042 /* Resources */,
 			);
 			path = ColourPiker;
+			sourceTree = "<group>";
+		};
+		124682442889509C004EB042 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				124682342889506B004EB042 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		12468245288953B0004EB042 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				124682362889506B004EB042 /* Main.storyboard */,
+				1246823B28895070004EB042 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		124682462889544C004EB042 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				124682302889506B004EB042 /* AppDelegate.swift */,
+				124682322889506B004EB042 /* SceneDelegate.swift */,
+				1246823E28895070004EB042 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		124682472889546B004EB042 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1246823928895070004EB042 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +322,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ColourPiker/Info.plist;
+				INFOPLIST_FILE = "ColourPiker/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ColourPiker/Info.plist;
+				INFOPLIST_FILE = "ColourPiker/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
