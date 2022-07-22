@@ -9,6 +9,9 @@ import UIKit
 
 class EditColourViewController: UIViewController {
 
+    //MARK: - Properties
+    weak var delegate: StartViewControllerDelegate?
+    
     //MARK: - Outlets
     @IBOutlet weak var colourFieldView: UIView!
     
