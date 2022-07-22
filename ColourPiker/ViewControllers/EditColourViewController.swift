@@ -53,6 +53,7 @@ class EditColourViewController: UIViewController {
             default:
                 break
         }
+        colourFieldView.backgroundColor = UIColor(red: CGFloat(round(redSlider.value * 100) / 100.0), green: CGFloat(round(greenSlider.value * 100) / 100.0), blue: CGFloat(round(blueSlider.value * 100) / 100.0), alpha: CGFloat(1.0))
     }
     
 
