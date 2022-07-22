@@ -7,7 +7,11 @@
 
 import UIKit
 
-class StartViewController: UIViewController {
+protocol StartViewControllerDelegate: AnyObject {
+    func updateUi(setColor: UIColor)
+}
+
+class StartViewController: UIViewController, StartViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,10 +20,14 @@ class StartViewController: UIViewController {
     }
 
     @objc func editTapped() {
-        //open edit page
+        let editColourViewController = EditColourViewController()
+        editColourViewController.delegate = self
+        navigationController?.pushViewController(editColourViewController, animated: true)
         print("tapped")
     }
 
-    
+    func updateUi(setColor: UIColor) {
+        self.view.backgroundColor = setColor
+    }
 
 }
