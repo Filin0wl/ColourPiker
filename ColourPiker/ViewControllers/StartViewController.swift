@@ -7,7 +7,11 @@
 
 import UIKit
 
-class StartViewController: UIViewController {
+protocol StartViewControllerDelegate: AnyObject {
+    func updateUi(setColor: UIColor)
+}
+
+class StartViewController: UIViewController, StartViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +24,8 @@ class StartViewController: UIViewController {
         print("tapped")
     }
 
-    
+    func updateUi(setColor: UIColor) {
+        self.view.backgroundColor = setColor
+    }
 
 }
