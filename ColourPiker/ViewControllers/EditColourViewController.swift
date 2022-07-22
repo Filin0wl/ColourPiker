@@ -32,10 +32,12 @@ class EditColourViewController: UIViewController {
     
     @IBOutlet weak var doneButton: UIButton!
     
+    //MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
         
         colourFieldView.layer.cornerRadius = 6
+        self.navigationItem.setHidesBackButton(true, animated: false)
        
     }
 
@@ -57,6 +59,13 @@ class EditColourViewController: UIViewController {
         updateUI()
     }
     
+    @IBAction func doneButtonPressed(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+        delegate?.updateUi(setColor: colourFieldView.backgroundColor ?? .white)
+    }
+    
+    
+    //MARK: - Functions
     private func updateUI() {
         colourFieldView.backgroundColor = UIColor(red: CGFloat(roundByDecimal(value: redSlider.value)), green: CGFloat(roundByDecimal(value: greenSlider.value)), blue: CGFloat(roundByDecimal(value: blueSlider.value)), alpha: CGFloat(1.0))
     }

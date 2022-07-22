@@ -120,6 +120,9 @@
                     <buttonConfiguration key="configuration" style="plain" title="Done">
                         <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="doneButtonPressed:" destination="-1" eventType="touchUpInside" id="dqP-fr-5lo"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWU-eM-aRF">
                     <rect key="frame" x="67" y="389" width="30" height="34"/>
