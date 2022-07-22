@@ -11,6 +11,7 @@ class EditColourViewController: UIViewController {
 
     //MARK: - Properties
     weak var delegate: StartViewControllerDelegate?
+    weak var backgroundColour = UIColor.white
     
     //MARK: - Outlets
     @IBOutlet weak var colourFieldView: UIView!
@@ -37,6 +38,7 @@ class EditColourViewController: UIViewController {
         super.viewDidLoad()
         
         colourFieldView.layer.cornerRadius = 6
+        colourFieldView.backgroundColor = backgroundColour
         self.navigationItem.setHidesBackButton(true, animated: false)
        
     }

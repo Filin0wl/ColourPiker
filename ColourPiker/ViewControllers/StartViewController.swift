@@ -22,6 +22,7 @@ class StartViewController: UIViewController, StartViewControllerDelegate {
     @objc func editTapped() {
         let editColourViewController = EditColourViewController()
         editColourViewController.delegate = self
+        editColourViewController.backgroundColour = self.view.backgroundColor
         navigationController?.pushViewController(editColourViewController, animated: true)
         print("tapped")
     }
