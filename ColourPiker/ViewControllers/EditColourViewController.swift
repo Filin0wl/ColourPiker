@@ -33,8 +33,6 @@ class EditColourViewController: UIViewController {
         super.viewDidLoad()
         
         colourFieldView.layer.cornerRadius = 6
-        
-        
        
     }
 
@@ -53,7 +51,15 @@ class EditColourViewController: UIViewController {
             default:
                 break
         }
-        colourFieldView.backgroundColor = UIColor(red: CGFloat(round(redSlider.value * 100) / 100.0), green: CGFloat(round(greenSlider.value * 100) / 100.0), blue: CGFloat(round(blueSlider.value * 100) / 100.0), alpha: CGFloat(1.0))
+        updateUI()
+    }
+    
+    private func updateUI() {
+        colourFieldView.backgroundColor = UIColor(red: CGFloat(roundByDecimal(value: redSlider.value)), green: CGFloat(roundByDecimal(value: greenSlider.value)), blue: CGFloat(roundByDecimal(value: blueSlider.value)), alpha: CGFloat(1.0))
+    }
+    
+    private func roundByDecimal(value: Float) -> Float {
+        round(value * 100) / 100.0
     }
     
 
