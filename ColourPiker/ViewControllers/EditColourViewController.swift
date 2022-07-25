@@ -11,7 +11,7 @@ class EditColourViewController: UIViewController {
 
     //MARK: - Properties
     weak var delegate: StartViewControllerDelegate?
-    weak var backgroundColour = UIColor.white
+    var backgroundColour: UIColor!
     
     //MARK: - Outlets
     @IBOutlet weak var colourFieldView: UIView!
@@ -38,7 +38,12 @@ class EditColourViewController: UIViewController {
         super.viewDidLoad()
         
         colourFieldView.layer.cornerRadius = 6
-        colourFieldView.backgroundColor = backgroundColour
+        let colours = backgroundColour?.cgColor.components
+        redSlider.value = Float(colours?[0] ?? 1.00)
+        greenSlider.value = Float(colours?[1] ?? 1.00)
+        blueSlider.value = Float(colours?[2] ?? 1.00)
+        updateFieldColour()
+        updateLabels()
         self.navigationItem.setHidesBackButton(true, animated: false)
        
     }
@@ -58,7 +63,7 @@ class EditColourViewController: UIViewController {
             default:
                 break
         }
-        updateUI()
+        updateFieldColour()
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
@@ -68,12 +73,23 @@ class EditColourViewController: UIViewController {
     
     
     //MARK: - Functions
-    private func updateUI() {
+    private func updateFieldColour() {
         colourFieldView.backgroundColor = UIColor(red: CGFloat(roundByDecimal(value: redSlider.value)), green: CGFloat(roundByDecimal(value: greenSlider.value)), blue: CGFloat(roundByDecimal(value: blueSlider.value)), alpha: CGFloat(1.0))
     }
     
     private func roundByDecimal(value: Float) -> Float {
         round(value * 100) / 100.0
+    }
+    
+    private func updateLabels(){
+        redValueLabel.text = String(format: "%.2f", redSlider.value)
+        redTextField.text = String(format: "%.2f", redSlider.value)
+        
+        greenValueLabel.text = String(format: "%.2f", greenSlider.value)
+        greenTextField.text = String(format: "%.2f", greenSlider.value)
+        
+        blueValueLabel.text = String(format: "%.2f", blueSlider.value)
+        blueTextField.text = String(format: "%.2f", blueSlider.value)
     }
     
 
