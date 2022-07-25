@@ -38,13 +38,14 @@ class EditColourViewController: UIViewController {
         super.viewDidLoad()
         
         colourFieldView.layer.cornerRadius = 6
+        self.navigationItem.setHidesBackButton(true, animated: false)
         let colours = backgroundColour?.cgColor.components
         redSlider.value = Float(colours?[0] ?? 1.00)
         greenSlider.value = Float(colours?[1] ?? 1.00)
         blueSlider.value = Float(colours?[2] ?? 1.00)
         updateFieldColour()
         updateLabels()
-        self.navigationItem.setHidesBackButton(true, animated: false)
+        
        
     }
 
